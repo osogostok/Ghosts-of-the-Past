@@ -7,7 +7,7 @@ WORKDIR /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 WORKDIR /app/src/my_bot
-RUN python load_all.py
-RUN python load_map.py
+RUN python load_all.py \
+    && python load_map.py
 
 CMD ["python", "main.py"]

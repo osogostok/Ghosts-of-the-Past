@@ -61,8 +61,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="models.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="models.html#models-facade-module">models.facade module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="models.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models.facade">models.facade module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="settings.html">settings package</a></li>
@@ -101,20 +101,459 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="models-figura-enemy-module">
-<h2>models.figura.enemy module<a class="headerlink" href="#models-figura-enemy-module" title="Link to this heading"></a></h2>
+<section id="module-models.figura.enemy">
+<span id="models-figura-enemy-module"></span><h2>models.figura.enemy module<a class="headerlink" href="#module-models.figura.enemy" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.figura.enemy.Enemy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.figura.enemy.</span></span><span class="sig-name descname"><span class="pre">Enemy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.enemy.Enemy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.figura.npc.NPC" title="models.figura.npc.NPC"><code class="xref py py-class docutils literal notranslate"><span class="pre">NPC</span></code></a></p>
+<p>A class representing an Enemy, inheriting from the NPC (Non-Player Character)
+class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the enemy.</p></li>
+<li><p><strong>_hp</strong> (<em>int</em>) – The health points (HP) of the enemy.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__(self,</span> <span class="pre">name</span></span></dt>
+<dd><p>str): Initializes an Enemy instance with a
+given name and sets initial HP to 1.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.enemy.Enemy.attack">
+<span class="sig-name descname"><span class="pre">attack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.enemy.Enemy.attack" title="Link to this definition"></a></dt>
+<dd><p>Placeholder method for enemy attacks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">take_hit(self,</span> <span class="pre">damage</span></span></dt>
+<dd><p>int): Reduces the enemy’s health points by
+the given damage.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">attack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Placeholder method for enemy attacks.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.enemy.Enemy.hp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.figura.enemy.Enemy.hp" title="Link to this definition"></a></dt>
+<dd><p>Get the current health points of the enemy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.enemy.Enemy.take_hit">
+<span class="sig-name descname"><span class="pre">take_hit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.enemy.Enemy.take_hit" title="Link to this definition"></a></dt>
+<dd><p>Reduces the enemy’s health points by the given damage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>If the health points fall to</strong><strong> or </strong><strong>below zero</strong><strong>, </strong><strong>raises an exception</strong> – </p></li>
+<li><p><strong>indicating game over.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="models-figura-location-module">
-<h2>models.figura.location module<a class="headerlink" href="#models-figura-location-module" title="Link to this heading"></a></h2>
+<section id="module-models.figura.location">
+<span id="models-figura-location-module"></span><h2>models.figura.location module<a class="headerlink" href="#module-models.figura.location" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.figura.location.Direction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.figura.location.</span></span><span class="sig-name descname"><span class="pre">Direction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.location.Direction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Direction from current location to another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>direction</strong> (<em>str</em>) – orientation.</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.location.Direction.direction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.figura.location.Direction.direction" title="Link to this definition"></a></dt>
+<dd><p>Get direction</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.figura.location.Location">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.figura.location.</span></span><span class="sig-name descname"><span class="pre">Location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">descriptoin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.location.Location" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A place where is protagonist be.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>int</em>) – location id.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – location name.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – location description.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.location.Location.description">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.figura.location.Location.description" title="Link to this definition"></a></dt>
+<dd><p>Get location descriptiion</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.location.Location.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.figura.location.Location.id" title="Link to this definition"></a></dt>
+<dd><p>Get location id</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.location.Location.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.figura.location.Location.name" title="Link to this definition"></a></dt>
+<dd><p>Get location name</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="models-figura-npc-module">
-<h2>models.figura.npc module<a class="headerlink" href="#models-figura-npc-module" title="Link to this heading"></a></h2>
+<section id="module-models.figura.npc">
+<span id="models-figura-npc-module"></span><h2>models.figura.npc module<a class="headerlink" href="#module-models.figura.npc" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.figura.npc.NPC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.figura.npc.</span></span><span class="sig-name descname"><span class="pre">NPC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.npc.NPC" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing a Non-Player Character (NPC).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the NPC.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__(self,</span> <span class="pre">name</span></span></dt>
+<dd><p>str): Initializes an NPC instance with a given name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.npc.NPC.talk">
+<span class="sig-name descname"><span class="pre">talk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.npc.NPC.talk" title="Link to this definition"></a></dt>
+<dd><p>Placeholder method for NPC dialogue or communication.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">receive(self,</span> <span class="pre">item</span></span></dt>
+<dd><p>str): Receives an item from the protagonist.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.npc.NPC.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.figura.npc.NPC.name" title="Link to this definition"></a></dt>
+<dd><p>Get NPC name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.npc.NPC.receive">
+<span class="sig-name descname"><span class="pre">receive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.npc.NPC.receive" title="Link to this definition"></a></dt>
+<dd><p>Get item from protagonist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item</strong> (<em>str</em>) – item which NPC receive.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">talk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>Placeholder method for NPC dialogue or communication.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="models-figura-protagonist-module">
-<h2>models.figura.protagonist module<a class="headerlink" href="#models-figura-protagonist-module" title="Link to this heading"></a></h2>
+<section id="module-models.figura.protagonist">
+<span id="models-figura-protagonist-module"></span><h2>models.figura.protagonist module<a class="headerlink" href="#module-models.figura.protagonist" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.figura.protagonist.</span></span><span class="sig-name descname"><span class="pre">Protagonist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.protagonist.Protagonist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Representing the main character (protagonist) in a text-based adventure
+game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command_db</strong> (<a class="reference internal" href="models.command.html#models.command.CommandDAO" title="models.command.CommandDAO"><em>CommandDAO</em></a>) – An instance of the CommandDAO class for
+handling game commands.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the protagonist.</p></li>
+<li><p><strong>hp</strong> (<em>int</em>) – The health points (HP) of the protagonist.</p></li>
+<li><p><strong>xp</strong> (<em>int</em>) – The experience points (XP) of the protagonist.</p></li>
+<li><p><strong>inventory</strong> (<em>defaultdict</em>) – A defaultdict representing the inventory of
+the protagonist.</p></li>
+<li><p><strong>curr_location</strong> (<em>int</em>) – The current location ID of the protagonist.</p></li>
+<li><p><strong>line_id</strong> (<em>int</em>) – The current dialogue line ID of the protagonist.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__(self,</span> <span class="pre">name</span></span></dt>
+<dd><p>str): Initializes a Protagonist instance
+with the given name and default attributes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">go(self,</span> <span class="pre">direction</span></span></dt>
+<dd><p>Direction): Moves the protagonist to the next
+location based on the given direction.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.whereami">
+<span class="sig-name descname"><span class="pre">whereami</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.protagonist.Protagonist.whereami" title="Link to this definition"></a></dt>
+<dd><p>Returns the current location ID of the
+protagonist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">talk_to(self,</span> <span class="pre">npc</span></span></dt>
+<dd><p>NPC): Placeholder method for interacting with
+NPCs through dialogue.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">attack(self,</span> <span class="pre">enemy</span></span></dt>
+<dd><p>Enemy): Placeholder method for attacking enemies.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">advance_xp(self,</span> <span class="pre">value</span></span></dt>
+<dd><p>int = 1): Advances the experience points of
+the protagonist by the specified value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">heal(self,</span> <span class="pre">value</span></span></dt>
+<dd><p>int = 1): Heals the protagonist by the specified amount.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">take_hit(self,</span> <span class="pre">damage</span></span></dt>
+<dd><p>int = 1): Inflicts damage to the protagonist,
+handling game over if HP drops to zero.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">take(self,</span> <span class="pre">item</span></span></dt>
+<dd><p>str): Adds an item to the protagonist’s inventory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">give(self,</span> <span class="pre">npc</span></span></dt>
+<dd><p>NPC, item: str): Gives an item from the protagonist’s
+inventory to an NPC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.show_inventory">
+<span class="sig-name descname"><span class="pre">show_inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.show_inventory" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of items in the protagonist’s
+inventory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.use_attributes">
+<span class="sig-name descname"><span class="pre">use_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.figura.protagonist.Protagonist.use_attributes" title="Link to this definition"></a></dt>
+<dd><p>Uses certain attributes (heals, advances XP,
+consumes an item) based on game logic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.advance_xp">
+<span class="sig-name descname"><span class="pre">advance_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.advance_xp" title="Link to this definition"></a></dt>
+<dd><p>Advances the experience points of the protagonist by the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – The amount by which to advance the experience points (default is 1).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.attack">
+<span class="sig-name descname"><span class="pre">attack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enemy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#models.figura.enemy.Enemy" title="models.figura.enemy.Enemy"><span class="pre">Enemy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.attack" title="Link to this definition"></a></dt>
+<dd><p>Placeholder method for attacking enemies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enemy</strong> (<a class="reference internal" href="#models.figura.enemy.Enemy" title="models.figura.enemy.Enemy"><em>Enemy</em></a>) – The enemy to attack.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.curr_location">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">curr_location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.figura.protagonist.Protagonist.curr_location" title="Link to this definition"></a></dt>
+<dd><p>Get protagonist current location</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.give">
+<span class="sig-name descname"><span class="pre">give</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#models.figura.npc.NPC" title="models.figura.npc.NPC"><span class="pre">NPC</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.give" title="Link to this definition"></a></dt>
+<dd><p>Gives an item from the protagonist’s inventory to an NPC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>npc</strong> (<a class="reference internal" href="#models.figura.npc.NPC" title="models.figura.npc.NPC"><em>NPC</em></a>) – The NPC to give the item to.</p></li>
+<li><p><strong>item</strong> (<em>str</em>) – The item to give.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.go">
+<span class="sig-name descname"><span class="pre">go</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#models.figura.location.Direction" title="models.figura.location.Direction"><span class="pre">Direction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.go" title="Link to this definition"></a></dt>
+<dd><p>Moves the protagonist to the next location based on the given direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>direction</strong> (<a class="reference internal" href="#models.figura.location.Direction" title="models.figura.location.Direction"><em>Direction</em></a>) – The direction in which the protagonist is moving.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new dialogue line ID.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.heal">
+<span class="sig-name descname"><span class="pre">heal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.heal" title="Link to this definition"></a></dt>
+<dd><p>Heals the protagonist by the specified amount.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – The amount by which to heal (default is 1).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.hp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.figura.protagonist.Protagonist.hp" title="Link to this definition"></a></dt>
+<dd><p>Get protagonist health</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.inventory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inventory</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">defaultdict</span></em><a class="headerlink" href="#models.figura.protagonist.Protagonist.inventory" title="Link to this definition"></a></dt>
+<dd><p>Get protagonist inventory</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.line_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">line_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.figura.protagonist.Protagonist.line_id" title="Link to this definition"></a></dt>
+<dd><p>Get protagonist line id</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.figura.protagonist.Protagonist.name" title="Link to this definition"></a></dt>
+<dd><p>Get protagonist name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">show_inventory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of items in the protagonist’s inventory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of items in the inventory.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.take">
+<span class="sig-name descname"><span class="pre">take</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.take" title="Link to this definition"></a></dt>
+<dd><p>Adds an item to the protagonist’s inventory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item</strong> (<em>str</em>) – The item to add to the inventory.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.take_hit">
+<span class="sig-name descname"><span class="pre">take_hit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.take_hit" title="Link to this definition"></a></dt>
+<dd><p>Inflicts damage to the protagonist, handling game over if HP drops to zero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>damage</strong> (<em>int</em>) – The amount of damage to inflict (default is 1).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.talk_to">
+<span class="sig-name descname"><span class="pre">talk_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">npc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#models.figura.npc.NPC" title="models.figura.npc.NPC"><span class="pre">NPC</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#models.figura.protagonist.Protagonist.talk_to" title="Link to this definition"></a></dt>
+<dd><p>Placeholder method for interacting with NPCs through dialogue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>npc</strong> (<a class="reference internal" href="#models.figura.npc.NPC" title="models.figura.npc.NPC"><em>NPC</em></a>) – The NPC to interact with</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">use_attributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Uses certain attributes (heals, advances XP, consumes an item)
+based on game logic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">whereami</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Returns the current location ID of the protagonist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current location ID.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.figura.protagonist.Protagonist.xp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.figura.protagonist.Protagonist.xp" title="Link to this definition"></a></dt>
+<dd><p>Get protagonist xp</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-models.figura">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-models.figura" title="Link to this heading"></a></h2>
 </section>
 </section>
 

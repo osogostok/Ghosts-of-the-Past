@@ -61,8 +61,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="models.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="models.html#models-facade-module">models.facade module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="models.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models.facade">models.facade module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="settings.html">settings package</a></li>
@@ -98,8 +98,239 @@
              
   <section id="models-command-package">
 <h1>models.command package<a class="headerlink" href="#models-command-package" title="Link to this heading"></a></h1>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-models.command">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-models.command" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.command.CommandDAO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.command.</span></span><span class="sig-name descname"><span class="pre">CommandDAO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A Data Access Object (DAO) class for handling database queries related
+to game commands.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.__new__">
+<span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.__new__" title="Link to this definition"></a></dt>
+<dd><p>Singleton pattern implementation to
+ensure a single instance of the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initializes the CommandDAO instance and sets up the
+database connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.get_direction">
+<span class="sig-name descname"><span class="pre">get_direction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.get_direction" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the possible directions
+from a given location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.get_name_location">
+<span class="sig-name descname"><span class="pre">get_name_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.get_name_location" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the name of a location
+based on its ID.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.get_description_location">
+<span class="sig-name descname"><span class="pre">get_description_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.get_description_location" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the description
+of a location based on its ID.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.get_story_line">
+<span class="sig-name descname"><span class="pre">get_story_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.get_story_line" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the story line details for a
+given line ID.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.change_healith">
+<span class="sig-name descname"><span class="pre">change_healith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.change_healith" title="Link to this definition"></a></dt>
+<dd><p>Retrieves health and experience distribution
+information for a given line ID.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.get_next_location_id">
+<span class="sig-name descname"><span class="pre">get_next_location_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.get_next_location_id" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the next
+location ID based on the current location and direction.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.get_max_line_id_location">
+<span class="sig-name descname"><span class="pre">get_max_line_id_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.get_max_line_id_location" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the maximum line
+ID for a given location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.command.CommandDAO.get_start_dialog_location">
+<span class="sig-name descname"><span class="pre">get_start_dialog_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.command.CommandDAO.get_start_dialog_location" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the starting
+dialogue line ID for a given location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">change_healith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Retrieves health and experience distribution information for a given line ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>line_id</strong> (<em>int</em>) – The ID of the story line.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple containing health, experience,</dt><dd><p>and enemy health or None if not found.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">get_description_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the description of a location based on its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>location_id</strong> (<em>int</em>) – The ID of the location.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The description of the location.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">get_direction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the possible directions from a given location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>location_id</strong> (<em>int</em>) – The ID of the location.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of possible directions.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">get_max_line_id_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the maximum line ID for a given location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>curr_location_id</strong> (<em>int</em>) – The ID of the current location.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The maximum line ID or None if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">get_name_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the name of a location based on its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>location_id</strong> (<em>int</em>) – The ID of the location.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the location.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">get_next_location_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_location_idlocation_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the next location ID based on the current location and direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>direction</strong> (<em>str</em>) – The direction in which to move.</p></li>
+<li><p><strong>curr_location_id</strong> (<em>int</em>) – The ID of the current location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The next location ID or None if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">get_start_dialog_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_location_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the starting dialogue line ID for a given location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>curr_location_id</strong> (<em>int</em>) – The ID of the current location.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The starting dialogue line ID or None if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">get_story_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the story line details for a given line ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>line_id</strong> (<em>int</em>) – The ID of the story line.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A dictionary containing story line details</dt><dd><p>(text, options, next line IDs) or None if not found.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="models.command.CommandDAO.session">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">session</span></span><a class="headerlink" href="#models.command.CommandDAO.session" title="Link to this definition"></a></dt>
+<dd><p>Get new database session</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 

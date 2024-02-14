@@ -52,8 +52,16 @@
 <li class="toctree-l2"><a class="reference internal" href="controller.html">controller package</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">database package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#database-defaultdb-module">database.defaultdb module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-database.defaultdb">database.defaultdb module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#database.defaultdb.DefaultDatabase"><code class="docutils literal notranslate"><span class="pre">DefaultDatabase</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-database">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#database.HeroName"><code class="docutils literal notranslate"><span class="pre">HeroName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database.UserInfo"><code class="docutils literal notranslate"><span class="pre">UserInfo</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database.UserProgress"><code class="docutils literal notranslate"><span class="pre">UserProgress</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="load_all.html">load_all module</a></li>
@@ -95,11 +103,370 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="database-defaultdb-module">
-<h2>database.defaultdb module<a class="headerlink" href="#database-defaultdb-module" title="Link to this heading"></a></h2>
+<section id="module-database.defaultdb">
+<span id="database-defaultdb-module"></span><h2>database.defaultdb module<a class="headerlink" href="#module-database.defaultdb" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">database.defaultdb.</span></span><span class="sig-name descname"><span class="pre">DefaultDatabase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default.db'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides basic operations for working with a database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_name</strong> (<em>str</em>) – name of database.</p></li>
+<li><p><strong>db_exists</strong> (<em>bool</em>) – <p>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default.db'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.__init__" title="Link to this definition"></a></dt>
+<dd><p>Establishes a connection to the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.create_tables">
+<span class="sig-name descname"><span class="pre">create_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.create_tables" title="Link to this definition"></a></dt>
+<dd><p>Creates a table in the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.insert_data">
+<span class="sig-name descname"><span class="pre">insert_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.insert_data" title="Link to this definition"></a></dt>
+<dd><p>Inserts a record into the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.insert_or_replace_data">
+<span class="sig-name descname"><span class="pre">insert_or_replace_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.insert_or_replace_data" title="Link to this definition"></a></dt>
+<dd><p>Inserts or replaces a record in the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.get_all_data">
+<span class="sig-name descname"><span class="pre">get_all_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.get_all_data" title="Link to this definition"></a></dt>
+<dd><p>Retrieves all records from the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.delete_row">
+<span class="sig-name descname"><span class="pre">delete_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.delete_row" title="Link to this definition"></a></dt>
+<dd><p>Deletes a record from the table based on the specified condition.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.clear_table">
+<span class="sig-name descname"><span class="pre">clear_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.clear_table" title="Link to this definition"></a></dt>
+<dd><p>Clears all records from the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.drop_table">
+<span class="sig-name descname"><span class="pre">drop_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.drop_table" title="Link to this definition"></a></dt>
+<dd><p>Drops the specified table from the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.defaultdb.DefaultDatabase.drop_database">
+<span class="sig-name descname"><span class="pre">drop_database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.defaultdb.DefaultDatabase.drop_database" title="Link to this definition"></a></dt>
+<dd><p>Drops the entire database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">clear_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Clears all records from the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">create_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>Creates a table in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p></li>
+<li><p><strong>*args</strong> – Column names and their data types.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">delete_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Deletes a record from the table based on the specified condition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p></li>
+<li><p><strong>condition</strong> (<em>str</em>) – The condition for deleting records.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">drop_database</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Drops the entire database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">drop_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Drops the specified table from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">get_all_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>Retrieves all records from the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of tuples representing the records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">insert_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Inserts a record into the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Dictionary representing the record to be inserted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">insert_or_replace_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Inserts or replaces a record in the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Dictionary representing the record to be inserted or replaced.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-database">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-database" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="database.HeroName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">database.</span></span><span class="sig-name descname"><span class="pre">HeroName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'game.db'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.HeroName" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#database.defaultdb.DefaultDatabase" title="database.defaultdb.DefaultDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultDatabase</span></code></a></p>
+<p>Class for managing hero names in the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>TABLE_NAME</strong> (<em>str</em>) – Name of the table in the database.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="database.HeroName.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DATABASE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.HeroName.__init__" title="Link to this definition"></a></dt>
+<dd><p>Create the table in the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.HeroName.insert_hero_name">
+<span class="sig-name descname"><span class="pre">insert_hero_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hero_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.HeroName.insert_hero_name" title="Link to this definition"></a></dt>
+<dd><p>Insert or update a
+hero’s name in the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.HeroName.get_hero_name">
+<span class="sig-name descname"><span class="pre">get_hero_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.HeroName.get_hero_name" title="Link to this definition"></a></dt>
+<dd><p>Get the hero’s name for a user from
+the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">get_hero_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><p>Get the hero’s name for a user from the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>telegram_id</strong> (<em>int</em>) – Telegram ID of the user.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Hero’s name if found, otherwise None.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.HeroName.insert_field">
+<span class="sig-name descname"><span class="pre">insert_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hero_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.HeroName.insert_field" title="Link to this definition"></a></dt>
+<dd><p>Insert or update a hero’s name in the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>telegram_id</strong> (<em>int</em>) – Telegram ID of the user.</p></li>
+<li><p><strong>hero_name</strong> (<em>str</em>) – Name of the hero.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="database.UserInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">database.</span></span><span class="sig-name descname"><span class="pre">UserInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'game.db'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserInfo" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#database.defaultdb.DefaultDatabase" title="database.defaultdb.DefaultDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultDatabase</span></code></a></p>
+<p>Class for managing user information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>TABLE_NAME</strong> (<em>str</em>) – Name of the table in the database.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserInfo.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DATABASE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserInfo.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize the UserInfo object and
+create the table in the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserInfo.insert_user_field">
+<span class="sig-name descname"><span class="pre">insert_user_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserInfo.insert_user_field" title="Link to this definition"></a></dt>
+<dd><p>Insert a user record into the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserInfo.get_telegram_id">
+<span class="sig-name descname"><span class="pre">get_telegram_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserInfo.get_telegram_id" title="Link to this definition"></a></dt>
+<dd><p>Get the Telegram ID of a user from
+the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">get_telegram_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dd><p>Get the Telegram ID of a user from the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>telegram_id</strong> (<em>int</em>) – Telegram ID of the user.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Telegram ID if found, otherwise None.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserInfo.insert_field">
+<span class="sig-name descname"><span class="pre">insert_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserInfo.insert_field" title="Link to this definition"></a></dt>
+<dd><p>Insert a user record into the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>telegram_id</strong> (<em>int</em>) – Telegram ID of the user.</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – Username of the user.</p></li>
+<li><p><strong>first_name</strong> (<em>str</em>) – First name of the user.</p></li>
+<li><p><strong>is_bot</strong> (<em>int</em>) – Indicator of whether the user is a bot.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="database.UserProgress">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">database.</span></span><span class="sig-name descname"><span class="pre">UserProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'game.db'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserProgress" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#database.defaultdb.DefaultDatabase" title="database.defaultdb.DefaultDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultDatabase</span></code></a></p>
+<p>Class for managing user progress in the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>TABLE_NAME</strong> (<em>str</em>) – Name of the table in the database.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserProgress.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DATABASE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserProgress.__init__" title="Link to this definition"></a></dt>
+<dd><p>Create the table in the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserProgress.insert_user_progress">
+<span class="sig-name descname"><span class="pre">insert_user_progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserProgress.insert_user_progress" title="Link to this definition"></a></dt>
+<dd><p>Insert or update
+a user’s progress in the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserProgress.get_plot_code">
+<span class="sig-name descname"><span class="pre">get_plot_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserProgress.get_plot_code" title="Link to this definition"></a></dt>
+<dd><p>Get the plot code for a user from
+the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">get_plot_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dd><p>Get the plot code for a user from the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>telegram_id</strong> (<em>int</em>) – Telegram ID of the user.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Plot code for the user.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database.UserProgress.insert_field">
+<span class="sig-name descname"><span class="pre">insert_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#database.UserProgress.insert_field" title="Link to this definition"></a></dt>
+<dd><p>Insert or update a user’s progress in the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>telegram_id</strong> (<em>int</em>) – Telegram ID of the user.</p></li>
+<li><p><strong>plot_code</strong> (<em>int</em>) – Code representing the user’s progress in the game.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 

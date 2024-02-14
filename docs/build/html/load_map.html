@@ -52,7 +52,27 @@
 <li class="toctree-l2"><a class="reference internal" href="controller.html">controller package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="database.html">database package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="load_all.html">load_all module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">load_map module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">load_map module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#load_map.Connection"><code class="docutils literal notranslate"><span class="pre">Connection</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Connection.direction"><code class="docutils literal notranslate"><span class="pre">Connection.direction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Connection.id"><code class="docutils literal notranslate"><span class="pre">Connection.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Connection.location"><code class="docutils literal notranslate"><span class="pre">Connection.location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Connection.location_id"><code class="docutils literal notranslate"><span class="pre">Connection.location_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Connection.target_location_id"><code class="docutils literal notranslate"><span class="pre">Connection.target_location_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#load_map.Locations"><code class="docutils literal notranslate"><span class="pre">Locations</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Locations.connections"><code class="docutils literal notranslate"><span class="pre">Locations.connections</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Locations.description"><code class="docutils literal notranslate"><span class="pre">Locations.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Locations.id"><code class="docutils literal notranslate"><span class="pre">Locations.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load_map.Locations.name"><code class="docutils literal notranslate"><span class="pre">Locations.name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#load_map.insert_connections"><code class="docutils literal notranslate"><span class="pre">insert_connections()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load_map.insert_data"><code class="docutils literal notranslate"><span class="pre">insert_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load_map.insert_locations"><code class="docutils literal notranslate"><span class="pre">insert_locations()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="models.html">models package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="settings.html">settings package</a></li>
@@ -85,8 +105,129 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="load-map-module">
-<h1>load_map module<a class="headerlink" href="#load-map-module" title="Link to this heading"></a></h1>
+  <section id="module-load_map">
+<span id="load-map-module"></span><h1>load_map module<a class="headerlink" href="#module-load_map" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="load_map.Connection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">load_map.</span></span><span class="sig-name descname"><span class="pre">Connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_map.Connection" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></p>
+<p>SQLAlchemy model representing connections between locations in the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – int
+Primary key for the connection.</p></li>
+<li><p><strong>location_id</strong> – int
+Foreign key referencing the source location’s id.</p></li>
+<li><p><strong>target_location_id</strong> – int
+Foreign key referencing the target location’s id.</p></li>
+<li><p><strong>direction</strong> – str
+The direction of the connection.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Relationships:</dt><dd><dl class="simple">
+<dt>location<span class="classifier">relationship</span></dt><dd><p>Relationship with the Locations table using the foreign key location_id.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Connection.direction">
+<span class="sig-name descname"><span class="pre">direction</span></span><a class="headerlink" href="#load_map.Connection.direction" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Connection.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#load_map.Connection.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Connection.location">
+<span class="sig-name descname"><span class="pre">location</span></span><a class="headerlink" href="#load_map.Connection.location" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Connection.location_id">
+<span class="sig-name descname"><span class="pre">location_id</span></span><a class="headerlink" href="#load_map.Connection.location_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Connection.target_location_id">
+<span class="sig-name descname"><span class="pre">target_location_id</span></span><a class="headerlink" href="#load_map.Connection.target_location_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="load_map.Locations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">load_map.</span></span><span class="sig-name descname"><span class="pre">Locations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_map.Locations" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></p>
+<p>SQLAlchemy model representing locations in the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – int
+Primary key for the location.</p></li>
+<li><p><strong>name</strong> – str
+The name of the location.</p></li>
+<li><p><strong>description</strong> – str
+The description of the location.</p></li>
+<li><p><strong>connections</strong> – relationship
+Relationship with the Connection table, representing connections to other locations.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Locations.connections">
+<span class="sig-name descname"><span class="pre">connections</span></span><a class="headerlink" href="#load_map.Locations.connections" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Locations.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#load_map.Locations.description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Locations.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#load_map.Locations.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="load_map.Locations.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#load_map.Locations.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load_map.insert_connections">
+<span class="sig-prename descclassname"><span class="pre">load_map.</span></span><span class="sig-name descname"><span class="pre">insert_connections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#load_map.insert_connections" title="Link to this definition"></a></dt>
+<dd><p>Insert connection data into the database.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load_map.insert_data">
+<span class="sig-prename descclassname"><span class="pre">load_map.</span></span><span class="sig-name descname"><span class="pre">insert_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_map.insert_data" title="Link to this definition"></a></dt>
+<dd><p>Insert data into the specified table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>session</strong> (<em>Session</em>) – SQLAlchemy session.</p></li>
+<li><p><strong>model</strong> (<em>DeclarativeBase</em>) – SQLAlchemy model representing the table.</p></li>
+<li><p><strong>data</strong> (<em>list</em>) – List of dictionaries containing data to be inserted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load_map.insert_locations">
+<span class="sig-prename descclassname"><span class="pre">load_map.</span></span><span class="sig-name descname"><span class="pre">insert_locations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#load_map.insert_locations" title="Link to this definition"></a></dt>
+<dd><p>Insert location data into the database.</p>
+</dd></dl>
+
 </section>
 
 

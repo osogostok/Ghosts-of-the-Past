@@ -70,26 +70,26 @@
 <!-- GETTING STARTED -->
 ## Установка
 1. Склонируйте репозиторий 
-  ```bash 
-  git clone git@github.com:osogostok/Ghosts_of_the_Past.git
-  ```
+    ```bash 
+    git clone git@github.com:osogostok/Ghosts_of_the_Past.git
+    ```
 2. Отркройте *Dockerfile* (он находится внутри репозитория) и замените *YOUR_TOKEN* на ваш токен. О том откуда взять токен можно узнать <a href="https://core.telegram.org/bots/tutorial#getting-ready">здесь</a>
 3. После можете развернуть докер:
-  ```bash
-  docker build -t ghost_bot .
-  docker run -d ghost_bot
-```
+    ```bash
+    docker build -t ghost_bot .
+    docker run -d ghost_bot
+    ```
+<p align="right">(<a href="#readme-top">наверх</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Документация
 
-Чтобы узнать подробную документацию для каждой функции выполните следуюущие команды: 
-  ```bash
-  cd docs
-  make html
-  ```
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Чтобы узнать подробную документацию выполните следуюущие команды: 
+    ```bash
+    cd docs
+    make html
+    ```
+2. Вся документация находится в **docs/build** 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
